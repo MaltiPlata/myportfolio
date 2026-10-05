@@ -30,6 +30,7 @@
   :focus-visible { outline: 2px solid #ec3013; outline-offset: 2px; }
   .nav-scroll::-webkit-scrollbar { display: none; }
   .nav-scroll { scrollbar-width: none; }
+  summary::-webkit-details-marker { display: none; }
   @media (prefers-reduced-motion: no-preference) { .fade-in { animation: fi .3s ease both; } }
   @keyframes fi { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 </style>
@@ -37,7 +38,7 @@
 
 <div style="background:#0a0a0a;color:#f3f2f2;font-family:Archivo,sans-serif;min-height:100vh">
 
-  <a href="#work" style="position:absolute;left:-9999px;top:0;background:#ec3013;color:#0a0a0a;padding:12px 16px;font-size:12px;font-weight:700;z-index:60" style-focus="left:0">SKIP TO WORK</a>
+  <a href="#commercial" style="position:absolute;left:-9999px;top:0;background:#ec3013;color:#0a0a0a;padding:12px 16px;font-size:12px;font-weight:700;z-index:60" style-focus="left:0">SKIP TO WORK</a>
 
   <header style="position:sticky;top:0;z-index:30;background:#0a0a0a;border-bottom:2px solid #ec3013">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 0 18px">
@@ -47,7 +48,7 @@
       </a>
       <div style="display:flex;align-items:stretch;align-self:stretch;min-width:0">
         <nav class="nav-scroll" style="display:flex;align-items:stretch;overflow-x:auto;min-width:0">
-          <a href="#work" style="padding:0 13px;font-size:10px;font-weight:600;letter-spacing:0.16em;display:flex;align-items:center;white-space:nowrap" style-hover="color:#ec3013">WORK</a>
+          <a href="#commercial" style="padding:0 13px;font-size:10px;font-weight:600;letter-spacing:0.16em;display:flex;align-items:center;white-space:nowrap" style-hover="color:#ec3013">WORK</a>
           <a href="#clients" style="padding:0 13px;font-size:10px;font-weight:600;letter-spacing:0.16em;display:flex;align-items:center;white-space:nowrap" style-hover="color:#ec3013">CLIENTS</a>
           <a href="#about" style="padding:0 13px;font-size:10px;font-weight:600;letter-spacing:0.16em;display:flex;align-items:center;white-space:nowrap" style-hover="color:#ec3013">ABOUT</a>
           <sc-if value="{{ showMom }}" hint-placeholder-val="{{ false }}">
@@ -59,63 +60,46 @@
     </div>
   </header>
 
-  <section id="top" style="border-bottom:2px solid #2a2a2a;padding:52px 20px 44px;display:flex;flex-direction:column;gap:24px">
+  <section id="top" style="border-bottom:2px solid #2a2a2a;padding:36px 20px 32px;display:flex;flex-direction:column;gap:18px">
     <span style="font-size:10px;font-weight:600;letter-spacing:0.26em;color:#ec3013">ART DIRECTOR · DESIGNER · STRATEGIST · DENVER</span>
-    <h1 style="margin:0;font-size:clamp(44px,12vw,150px);line-height:0.86;font-weight:800;letter-spacing:-0.03em;text-transform:uppercase">Pamela<br>Shivarjoo</h1>
+    <h1 style="margin:0;font-size:clamp(40px,9vw,104px);line-height:0.86;font-weight:800;letter-spacing:-0.03em;text-transform:uppercase">Pamela<br>Shivarjoo</h1>
     <div style="height:2px;background:#ec3013"></div>
     <p style="margin:0;max-width:48ch;font-size:clamp(18px,4.4vw,24px);line-height:1.4;text-wrap:pretty">Senior brand designer and art director. Fifteen years across agency and in-house, from press-ready production art to campaigns that ran on Times Square.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <a href="#work" style="padding:15px 18px;background:#ec3013;color:#0a0a0a;font-size:12px;font-weight:700;letter-spacing:0.16em" style-hover="background:#c9250c">SEE THE WORK</a>
+      <a href="#commercial" style="padding:15px 18px;background:#ec3013;color:#0a0a0a;font-size:12px;font-weight:700;letter-spacing:0.16em" style-hover="background:#c9250c">SEE THE WORK</a>
       <a href="mailto:PamelaShivarjoo@gmail.com" style="padding:15px 18px;border:2px solid #3a3a3a;font-size:12px;font-weight:700;letter-spacing:0.16em" style-hover="border-color:#ec3013;color:#ec3013">EMAIL ME</a>
       <a href="work/pamela-shivarjoo-resume.pdf" download="Pamela-Shivarjoo-Resume.pdf" style="padding:15px 18px;border:2px solid #3a3a3a;font-size:12px;font-weight:700;letter-spacing:0.16em" style-hover="border-color:#ec3013;color:#ec3013">RÉSUMÉ ↓</a>
     </div>
-    <dl style="margin:20px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
-      <div style="background:#0a0a0a;padding:18px 16px">
-        <dt style="font-size:clamp(28px,7vw,40px);font-weight:800;letter-spacing:-0.02em">4M+</dt>
-        <dd style="margin:6px 0 0;font-size:10px;letter-spacing:0.18em;color:#a8a4a1">YOUTUBE VIEWS</dd>
-      </div>
-      <div style="background:#0a0a0a;padding:18px 16px">
-        <dt style="font-size:clamp(28px,7vw,40px);font-weight:800;letter-spacing:-0.02em">10+</dt>
-        <dd style="margin:6px 0 0;font-size:10px;letter-spacing:0.18em;color:#a8a4a1">YEARS IN THE FIELD</dd>
-      </div>
-      <div style="background:#0a0a0a;padding:18px 16px">
-        <dt style="font-size:clamp(28px,7vw,40px);font-weight:800;letter-spacing:-0.02em">20</dt>
-        <dd style="margin:6px 0 0;font-size:10px;letter-spacing:0.18em;color:#a8a4a1">BRANDS SHIPPED</dd>
-      </div>
-      <div style="background:#0a0a0a;padding:18px 16px">
-        <dt style="font-size:clamp(28px,7vw,40px);font-weight:800;letter-spacing:-0.02em">3</dt>
-        <dd style="margin:6px 0 0;font-size:10px;letter-spacing:0.18em;color:#a8a4a1">LANGUAGES SPOKEN AT HOME</dd>
-      </div>
-    </dl>
   </section>
 
 
-  <section id="work" style="border-bottom:2px solid #ec3013;padding:52px 20px;display:flex;flex-direction:column;gap:22px">
-    <h2 style="margin:0;font-size:clamp(30px,7.5vw,60px);line-height:0.94;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Selected work</h2>
-    <p style="margin:0;max-width:52ch;font-size:16px;line-height:1.55;color:#c9c6c4;text-wrap:pretty">Each discipline kept apart on purpose. Jump to the one you came for, or keep scrolling.</p>
-    <nav aria-label="Work sections" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:2px">
-      <sc-for list="{{ index }}" as="s" hint-placeholder-count="4">
-        <a href="{{ s.href }}" style="background:#0a0a0a;outline:2px solid #2a2a2a;outline-offset:-1px;padding:20px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;min-height:44px" style-hover="background:#ec3013;color:#0a0a0a">
-          <span style="font-size:14px;font-weight:700;letter-spacing:0.02em">{{ s.label }}</span>
-          <span style="font-size:11px;letter-spacing:0.14em;opacity:0.65">{{ s.count }}</span>
+  <section id="work" aria-label="Work" style="position:sticky;top:53px;z-index:25;background:#0a0a0a;border-bottom:2px solid #2a2a2a;display:flex;align-items:stretch">
+    <nav class="nav-scroll" aria-label="Work sections" style="display:flex;overflow-x:auto;flex:1;min-width:0;padding-left:4px">
+      <sc-for list="{{ index }}" as="s" hint-placeholder-count="5">
+        <a href="{{ s.href }}" style="position:relative;padding:0 14px;min-height:48px;display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase" style-hover="color:#ec3013">
+          <span>{{ s.short }}</span>
+          <span style="font-size:10px;font-weight:500;color:#a8a4a1">{{ s.count }}</span>
+          <sc-if value="{{ s.active }}" hint-placeholder-val="{{ false }}">
+            <span style="position:absolute;left:14px;right:14px;bottom:0;height:3px;background:#ec3013"></span>
+          </sc-if>
         </a>
       </sc-for>
     </nav>
-    <div style="display:flex;flex-direction:column;gap:12px;padding-top:10px">
-      <span style="font-size:10px;font-weight:600;letter-spacing:0.22em;color:#a8a4a1">BY INDUSTRY</span>
-      <nav aria-label="Work by industry" style="display:flex;flex-wrap:wrap;gap:8px">
+    <details ref="{{ indRef }}" style="position:relative;border-left:2px solid #2a2a2a;flex:none">
+      <summary style="list-style:none;cursor:pointer;padding:0 16px;min-height:48px;display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.14em;white-space:nowrap" style-hover="color:#ec3013">INDUSTRY <span style="color:#ec3013;font-size:14px">+</span></summary>
+      <div style="position:absolute;right:-2px;top:calc(100% + 2px);width:min(calc(100vw - 24px),440px);background:#0a0a0a;border:2px solid #ec3013;padding:16px;display:flex;flex-wrap:wrap;gap:8px">
         <sc-for list="{{ industries }}" as="i" hint-placeholder-count="7">
-          <a href="{{ i.href }}" style="padding:11px 14px;border:2px solid #3a3a3a;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;display:flex;align-items:center;gap:8px;min-height:44px" style-hover="border-color:#ec3013;color:#ec3013">
+          <a href="{{ i.href }}" onClick="{{ closeInd }}" style="padding:11px 14px;border:2px solid #3a3a3a;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;display:flex;align-items:center;gap:8px;min-height:44px" style-hover="border-color:#ec3013;color:#ec3013">
             <span>{{ i.name }}</span>
             <span style="font-size:10px;color:#a8a4a1">{{ i.count }}</span>
           </a>
         </sc-for>
-      </nav>
-    </div>
+      </div>
+    </details>
   </section>
 
 
-  <section id="commercial" style="border-bottom:2px solid #2a2a2a;padding:56px 20px;display:flex;flex-direction:column;gap:22px">
+  <section id="commercial" style="scroll-margin-top:100px;border-bottom:2px solid #2a2a2a;padding:40px 20px;display:flex;flex-direction:column;gap:22px">
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#ec3013">01</span>
       <h2 style="margin:0;font-size:clamp(28px,6.5vw,52px);line-height:0.96;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Commercial</h2>
@@ -124,7 +108,7 @@
     <div style="height:2px;background:#ec3013"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
       <sc-for list="{{ commercial }}" as="p" hint-placeholder-count="4">
-        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:90px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
+        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:118px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
           <div style="aspect-ratio:16/9;overflow:hidden;background:#141414;position:relative">
             <sc-if value="{{ p.colour }}" hint-placeholder-val="{{ false }}">
               <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
@@ -156,7 +140,7 @@
   </section>
 
 
-  <section id="presentations" style="border-bottom:2px solid #2a2a2a;padding:56px 20px;display:flex;flex-direction:column;gap:22px">
+  <section id="presentations" style="scroll-margin-top:100px;border-bottom:2px solid #2a2a2a;padding:40px 20px;display:flex;flex-direction:column;gap:22px">
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#ec3013">02</span>
       <h2 style="margin:0;font-size:clamp(28px,6.5vw,52px);line-height:0.96;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Presentation design</h2>
@@ -165,7 +149,7 @@
     <div style="height:2px;background:#ec3013"></div>
     <div style="display:flex;flex-direction:column;gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
       <sc-for list="{{ presentations }}" as="p" hint-placeholder-count="3">
-        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:90px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:stretch">
+        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:118px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:stretch">
           <div style="aspect-ratio:16/9;overflow:hidden;background:#141414;align-self:center">
             <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block">
           </div>
@@ -186,7 +170,7 @@
   </section>
 
 
-  <section id="social" style="border-bottom:2px solid #2a2a2a;padding:56px 20px;display:flex;flex-direction:column;gap:22px">
+  <section id="social" style="scroll-margin-top:100px;border-bottom:2px solid #2a2a2a;padding:40px 20px;display:flex;flex-direction:column;gap:22px">
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#ec3013">03</span>
       <h2 style="margin:0;font-size:clamp(28px,6.5vw,52px);line-height:0.96;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Social</h2>
@@ -195,7 +179,7 @@
     <div style="height:2px;background:#ec3013"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
       <sc-for list="{{ social }}" as="p" hint-placeholder-count="12">
-        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:90px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
+        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:118px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
           <div style="aspect-ratio:1/1;overflow:hidden;background:#141414;display:flex;align-items:center;justify-content:center;position:relative">
             <sc-if value="{{ p.setLabel }}" hint-placeholder-val="{{ false }}">
               <span style="position:absolute;left:0;bottom:0;z-index:1;background:#ec3013;color:#0a0a0a;font-size:10px;font-weight:700;letter-spacing:0.16em;padding:5px 9px">{{ p.setLabel }}</span>
@@ -221,7 +205,7 @@
 
 
 
-  <section id="print" style="border-bottom:2px solid #2a2a2a;padding:56px 20px;display:flex;flex-direction:column;gap:22px">
+  <section id="print" style="scroll-margin-top:100px;border-bottom:2px solid #2a2a2a;padding:40px 20px;display:flex;flex-direction:column;gap:22px">
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#ec3013">04</span>
       <h2 style="margin:0;font-size:clamp(28px,6.5vw,52px);line-height:0.96;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Print, OOH and digital display</h2>
@@ -237,7 +221,7 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
           <sc-for list="{{ g.items }}" as="p" hint-placeholder-count="3">
-            <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:90px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
+            <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:118px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
               <div style="aspect-ratio:3/2;overflow:hidden;background:#141414;position:relative">
                 <sc-if value="{{ p.colour }}" hint-placeholder-val="{{ false }}">
                   <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
@@ -270,7 +254,7 @@
   </section>
 
 
-  <section id="production" style="border-bottom:2px solid #2a2a2a;padding:56px 20px;display:flex;flex-direction:column;gap:22px">
+  <section id="production" style="scroll-margin-top:100px;border-bottom:2px solid #2a2a2a;padding:40px 20px;display:flex;flex-direction:column;gap:22px">
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#ec3013">05</span>
       <h2 style="margin:0;font-size:clamp(28px,6.5vw,52px);line-height:0.96;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Production art</h2>
@@ -279,7 +263,7 @@
     <div style="height:2px;background:#ec3013"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
       <sc-for list="{{ production }}" as="p" hint-placeholder-count="2">
-        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:90px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
+        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:118px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
           <div style="aspect-ratio:4/3;overflow:hidden;background:#141414;position:relative">
             <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
             <sc-if value="{{ p.setLabel }}" hint-placeholder-val="{{ false }}">
@@ -304,7 +288,7 @@
 
 
   <sc-if value="{{ showBranding }}" hint-placeholder-val="{{ false }}">
-  <section id="logos" style="border-bottom:2px solid #2a2a2a;padding:56px 20px;display:flex;flex-direction:column;gap:22px">
+  <section id="logos" style="scroll-margin-top:100px;border-bottom:2px solid #2a2a2a;padding:40px 20px;display:flex;flex-direction:column;gap:22px">
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#ec3013">06</span>
       <h2 style="margin:0;font-size:clamp(28px,6.5vw,52px);line-height:0.96;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Logos and identity</h2>
@@ -313,7 +297,7 @@
     <div style="height:2px;background:#ec3013"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
       <sc-for list="{{ logos }}" as="p" hint-placeholder-count="3">
-        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:90px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
+        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:118px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
           <div style="aspect-ratio:4/3;background:#f3f2f2;position:relative;display:flex;align-items:center;justify-content:center;padding:28px">
             <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block">
             <sc-if value="{{ p.setLabel }}" hint-placeholder-val="{{ false }}">
@@ -336,7 +320,7 @@
     </div>
   </section>
 
-  <section id="brands" style="border-bottom:2px solid #2a2a2a;padding:56px 20px;display:flex;flex-direction:column;gap:22px">
+  <section id="brands" style="scroll-margin-top:100px;border-bottom:2px solid #2a2a2a;padding:40px 20px;display:flex;flex-direction:column;gap:22px">
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#ec3013">07</span>
       <h2 style="margin:0;font-size:clamp(28px,6.5vw,52px);line-height:0.96;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Brand boards and color</h2>
@@ -345,7 +329,7 @@
     <div style="height:2px;background:#ec3013"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
       <sc-for list="{{ brands }}" as="p" hint-placeholder-count="3">
-        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:90px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
+        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:118px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
           <div style="aspect-ratio:3/4;background:#f3f2f2;position:relative;display:flex;align-items:flex-start;justify-content:center;overflow:hidden">
             <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" style="width:100%;height:auto;display:block">
             <sc-if value="{{ p.setLabel }}" hint-placeholder-val="{{ false }}">
@@ -353,7 +337,7 @@
             </sc-if>
 
   <sc-if value="{{ showInfographics }}" hint-placeholder-val="{{ false }}">
-  <section id="infographics" style="border-bottom:2px solid #2a2a2a;padding:56px 20px;display:flex;flex-direction:column;gap:22px">
+  <section id="infographics" style="scroll-margin-top:100px;border-bottom:2px solid #2a2a2a;padding:40px 20px;display:flex;flex-direction:column;gap:22px">
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#ec3013">08</span>
       <h2 style="margin:0;font-size:clamp(28px,6.5vw,52px);line-height:0.96;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">Infographics and data design</h2>
@@ -362,7 +346,7 @@
     <div style="height:2px;background:#ec3013"></div>
     <div style="display:flex;flex-direction:column;gap:2px;background:#2a2a2a;border:2px solid #2a2a2a">
       <sc-for list="{{ infographics }}" as="p" hint-placeholder-count="1">
-        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:90px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
+        <button type="button" id="{{ p.anchor }}" onClick="{{ p.onOpen }}" style="scroll-margin-top:118px;background:#0a0a0a;border:0;padding:0;margin:0;font-family:Archivo,sans-serif;color:#f3f2f2;text-align:left;cursor:pointer;display:flex;flex-direction:column">
           <div style="background:#141414;position:relative;display:flex;align-items:center;justify-content:center;padding:20px">
             <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" style="width:100%;max-height:62vh;object-fit:contain;display:block">
             <sc-if value="{{ p.setLabel }}" hint-placeholder-val="{{ false }}">
@@ -436,7 +420,37 @@
       <span style="font-size:10px;letter-spacing:0.2em;color:#a8a4a1">AGENCY AND IN-HOUSE</span>
     </div>
     <div style="height:2px;background:#ec3013"></div>
-    <p style="margin:0;font-size:clamp(17px,3.6vw,22px);line-height:1.75;font-weight:600;max-width:34ch;text-wrap:pretty" aria-label="Client list">Ford · Netflix · Sony · FX · FXX · Miramax · Mattress Firm · UGG · Epson · Paramount+ · Lionsgate · Laugh Out Loud · Children's Hospital LA · City of West Hollywood · LA Tourism · UHealth · Sit N' Sleep · Bank of Hawaii · CRC · San Diego Zoo · Veggie Grill · Occidental College</p>
+    <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));column-gap:32px" aria-label="Client list">
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Ford</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Netflix</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Disney</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Xbox</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Sony</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Paramount+</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Lionsgate</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Laugh Out Loud</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Miramax</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Fox</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">FX</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">FXX</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">DISH</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">UGG</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Epson</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">GILT</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Mattress Firm</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">The Naked Grape</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Veggie Grill</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">The James at Ohio State</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Children&rsquo;s Hospital LA</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">UHealth</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">City of West Hollywood</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">LA Tourism</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">San Diego Zoo</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Bank of Hawaii</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Sit N&rsquo; Sleep</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">CRC</li>
+      <li style="padding:12px 0;border-top:2px solid #2a2a2a;font-size:clamp(16px,2.4vw,19px);font-weight:600">Occidental College</li>
+    </ul>
   </section>
 
   <section id="about" style="border-bottom:2px solid #2a2a2a;padding:48px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px">
@@ -445,12 +459,6 @@
       <div style="height:2px;background:#ec3013"></div>
       <p style="margin:0;font-size:clamp(19px,4.6vw,24px);line-height:1.35;font-weight:600;max-width:34ch;text-wrap:pretty">Designer, art director and production artist. I brainstorm the idea, plan how it should work, and deliver files that are ready to print.</p>
       <p style="margin:0;font-size:16px;line-height:1.6;color:#c9c6c4;max-width:60ch;text-wrap:pretty">I studied advertising at ArtCenter in Pasadena and art direction at BookShop in Santa Monica. I started at M&amp;C Saatchi as a production artist, then designed for UGG, Fox, FXX and Veggie Grill and art directed a digital campaign for Epson. Since then I&rsquo;ve worked on Netflix, Disney and Xbox at Midnight Oil, on Ford in Dearborn, on key art for Paramount+ and Miramax, and on pitch decks for feature films and series.</p>
-      <figure style="margin:8px 0 0;display:flex;flex-direction:column;gap:10px">
-        <img src="work/about-pamela-young.jpg" alt="Pamela as a young girl in a white leotard and tutu, arms raised over her head in a ballet pose" style="display:block;width:100%;max-width:420px;height:auto">
-        <figcaption style="margin:0;display:flex;flex-direction:column;gap:6px;max-width:420px">
-          <span style="font-size:clamp(20px,4.4vw,26px);line-height:1.2;font-weight:800;letter-spacing:-0.01em;color:#f3f2f2;text-wrap:pretty">Ready to make beautiful digital art.</span>
-        </figcaption>
-      </figure>
     </div>
     <div style="display:flex;flex-direction:column;align-content:start">
       <div style="padding:16px 0;border-top:2px solid #2a2a2a;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
@@ -492,6 +500,16 @@
         </div>
       </div>
     </div>
+      <div style="grid-column:1/-1;padding-top:40px;border-top:2px solid #2a2a2a;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px;align-items:center">
+        <figure style="margin:0;display:flex;flex-direction:column;gap:12px;max-width:420px">
+          <img src="work/about-pamela-young.jpg" alt="Pamela as a young girl in a white leotard and tutu, arms raised over her head in a ballet pose" style="display:block;width:100%;max-width:420px;height:auto">
+          <figcaption style="margin:0;font-size:clamp(18px,3.6vw,22px);line-height:1.25;font-weight:800;letter-spacing:-0.01em;color:#f3f2f2;text-wrap:pretty">Ready to make beautiful digital art.</figcaption>
+        </figure>
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:52ch">
+          <span style="font-size:10px;letter-spacing:0.2em;color:#a8a4a1">OFF THE CLOCK</span>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#c9c6c4;text-wrap:pretty">I&rsquo;m a first-gen Chilean American learning Armenian, its language and its traditions, to help keep the culture alive in Colorado. I&rsquo;ve been rock climbing for over five years, and I&rsquo;ll always say yes to a day of white water rafting.</p>
+        </div>
+      </div>
   </section>
 
 <sc-if value="{{ showMom }}" hint-placeholder-val="{{ false }}">
@@ -652,13 +670,20 @@ const SECTION_ORDER = ['Commercial', 'Presentations', 'Social', 'Infographics', 
 const industryOf = p => (IND_RULES.find(r => p.kicker.indexOf(r[0]) === 0) || [null, null])[1];
 
 class Component extends DCLogic {
-  state = { open: null, slide: 0 };
+  state = { open: null, slide: 0, active: null };
+  indRef = React.createRef();
+  closeInd = () => { if (this.indRef.current) this.indRef.current.open = false; };
 
   componentDidMount() {
+    this._spy = () => { if (this._raf) return; this._raf = requestAnimationFrame(() => { this._raf = null; let a = null; ['commercial','presentations','social','print','production','logos','brands','infographics'].forEach(id => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < 140) a = id; }); const c = document.getElementById('clients'); if (c && c.getBoundingClientRect().top < 140) a = null; if (a !== this.state.active) this.setState({ active: a }); }); };
+    window.addEventListener('scroll', this._spy, { passive: true }); this._spy();
+    this._outside = e => { const d = this.indRef.current; if (d && d.open && !d.contains(e.target)) d.open = false; };
+    document.addEventListener('click', this._outside);
     this._key = e => { if (e.key === 'Escape' && this.state.open !== null) this.setState({ open: null }); };
     window.addEventListener('keydown', this._key);
   }
-  componentWillUnmount() { window.removeEventListener('keydown', this._key); }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._spy); document.removeEventListener('click', this._outside); window.removeEventListener('keydown', this._key); }
   componentDidUpdate() {
     document.body.style.overflow = this.state.open !== null ? 'hidden' : '';
   }
@@ -699,6 +724,7 @@ class Component extends DCLogic {
     }).filter(g => g.items.length);
     return {
       showBranding: showBranding,
+      indRef: this.indRef, closeInd: this.closeInd,
       showMom: this.props.showMom ?? false,
       showInfographics: showInfographics,
       index: [
@@ -710,7 +736,7 @@ class Component extends DCLogic {
         { label: 'Logos and identity', href: '#logos', count: n('Logos') },
         { label: 'Brand boards and color', href: '#brands', count: n('Brands') },
         { label: 'Infographics and data design', href: '#infographics', count: n('Infographics') }
-      ].filter(s => s.count > 0),
+      ].filter(s => s.count > 0).map(s => Object.assign({}, s, { short: ({ '#commercial': 'Commercial', '#presentations': 'Decks', '#social': 'Social', '#print': 'Print & OOH', '#production': 'Production', '#logos': 'Logos', '#brands': 'Brand boards', '#infographics': 'Infographics' })[s.href] || s.label, active: s.href === '#' + this.state.active })),
       industries: INDUSTRY_ORDER.map(name => {
         const ordered = SECTION_ORDER.filter(c => HIDDEN.indexOf(c) === -1).reduce((acc, c) => acc.concat(PROJECTS.filter(p => p.cat === c)), []);
         const hits = ordered.filter(p => industryOf(p) === name);
