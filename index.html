@@ -31,6 +31,21 @@
   .nav-scroll::-webkit-scrollbar { display: none; }
   .nav-scroll { scrollbar-width: none; }
   summary::-webkit-details-marker { display: none; }
+  /* Work tabs: soft fade on the right edge so it's clear the row scrolls */
+  .work-tabs { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+  .work-tabs.at-end { -webkit-mask-image: none; mask-image: none; }
+  /* Phones: header becomes two rows (name + Contact, then the menu) so nothing is hidden */
+  @media (max-width: 640px) {
+    .site-header-row { flex-wrap: wrap !important; padding: 0 !important; gap: 0 !important; }
+    .site-brand { flex: 1 1 auto; padding: 12px 0 12px 18px !important; min-width: 0; }
+    .site-header-right { display: contents !important; }
+    .site-contact { order: 2; align-self: stretch; padding: 0 18px !important; }
+    .site-nav { order: 3; flex: 1 0 100% !important; justify-content: space-between; overflow: visible !important; border-top: 1px solid #2a2a2a; height: 40px; padding: 0 6px; }
+    .site-nav a { padding: 0 12px !important; }
+    #work { top: var(--hdr-h, 96px) !important; }
+    section[id] { scroll-margin-top: 150px !important; }
+    button[id] { scroll-margin-top: 160px !important; }
+  }
   @media (prefers-reduced-motion: no-preference) { .fade-in { animation: fi .3s ease both; } }
   @keyframes fi { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 </style>
@@ -41,13 +56,13 @@
   <a href="#commercial" style="position:absolute;left:-9999px;top:0;background:#ec3013;color:#0a0a0a;padding:12px 16px;font-size:12px;font-weight:700;z-index:60" style-focus="left:0">SKIP TO WORK</a>
 
   <header style="position:sticky;top:0;z-index:30;background:#0a0a0a;border-bottom:2px solid #ec3013">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 0 18px">
-      <a href="#top" style="display:flex;flex-direction:column;gap:2px;padding:12px 0">
+    <div class="site-header-row" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 0 18px">
+      <a href="#top" class="site-brand" style="display:flex;flex-direction:column;gap:2px;padding:12px 0">
         <span style="font-size:14px;font-weight:700;letter-spacing:0.12em;line-height:1.1;white-space:nowrap">PAMELA SHIVARJOO</span>
         <span style="font-size:10px;font-weight:500;letter-spacing:0.22em;color:#ec3013;line-height:1.1">BRAND CREATIVE</span>
       </a>
-      <div style="display:flex;align-items:stretch;align-self:stretch;min-width:0">
-        <nav class="nav-scroll" style="display:flex;align-items:stretch;overflow-x:auto;min-width:0">
+      <div class="site-header-right" style="display:flex;align-items:stretch;align-self:stretch;min-width:0">
+        <nav class="nav-scroll site-nav" aria-label="Main" style="display:flex;align-items:stretch;overflow-x:auto;min-width:0">
           <a href="#commercial" style="padding:0 13px;font-size:10px;font-weight:600;letter-spacing:0.16em;display:flex;align-items:center;white-space:nowrap" style-hover="color:#ec3013">WORK</a>
           <a href="#clients" style="padding:0 13px;font-size:10px;font-weight:600;letter-spacing:0.16em;display:flex;align-items:center;white-space:nowrap" style-hover="color:#ec3013">CLIENTS</a>
           <a href="#about" style="padding:0 13px;font-size:10px;font-weight:600;letter-spacing:0.16em;display:flex;align-items:center;white-space:nowrap" style-hover="color:#ec3013">ABOUT</a>
@@ -55,7 +70,7 @@
             <a href="#mom" style="padding:0 13px;font-size:10px;font-weight:600;letter-spacing:0.16em;display:flex;align-items:center;white-space:nowrap" style-hover="color:#ec3013">OFF THE CLOCK</a>
           </sc-if>
         </nav>
-        <a href="#contact" style="padding:0 18px;font-size:10px;font-weight:700;letter-spacing:0.16em;background:#ec3013;color:#0a0a0a;display:flex;align-items:center;white-space:nowrap" style-hover="background:#c9250c">CONTACT</a>
+        <a href="#contact" class="site-contact" style="padding:0 18px;font-size:10px;font-weight:700;letter-spacing:0.16em;background:#ec3013;color:#0a0a0a;display:flex;align-items:center;white-space:nowrap" style-hover="background:#c9250c">CONTACT</a>
       </div>
     </div>
   </header>
@@ -74,7 +89,7 @@
 
 
   <section id="work" aria-label="Work" style="position:sticky;top:53px;z-index:25;background:#0a0a0a;border-bottom:2px solid #2a2a2a;display:flex;align-items:stretch">
-    <nav class="nav-scroll" aria-label="Work sections" style="display:flex;overflow-x:auto;flex:1;min-width:0;padding-left:4px">
+    <nav class="nav-scroll work-tabs" id="work-tabs" aria-label="Work sections" style="display:flex;overflow-x:auto;flex:1;min-width:0;padding-left:4px">
       <sc-for list="{{ index }}" as="s" hint-placeholder-count="5">
         <a href="{{ s.href }}" style="position:relative;padding:0 14px;min-height:48px;display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase" style-hover="color:#ec3013">
           <span>{{ s.short }}</span>
@@ -675,7 +690,9 @@ class Component extends DCLogic {
   closeInd = () => { if (this.indRef.current) this.indRef.current.open = false; };
 
   componentDidMount() {
-    this._spy = () => { if (this._raf) return; this._raf = requestAnimationFrame(() => { this._raf = null; let a = null; ['commercial','presentations','social','print','production','logos','brands','infographics'].forEach(id => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < 140) a = id; }); const c = document.getElementById('clients'); if (c && c.getBoundingClientRect().top < 140) a = null; if (a !== this.state.active) this.setState({ active: a }); }); };
+    this._spy = () => { if (this._raf) return; this._raf = requestAnimationFrame(() => { this._raf = null; let a = null; const wb = document.getElementById('work'); const lim = (wb ? wb.getBoundingClientRect().bottom : 100) + 40; ['commercial','presentations','social','print','production','logos','brands','infographics'].forEach(id => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < lim) a = id; }); const c = document.getElementById('clients'); if (c && c.getBoundingClientRect().top < lim) a = null; if (a !== this.state.active) { this.setState({ active: a }); const nav = document.getElementById('work-tabs'); const t = a && nav && nav.querySelector('a[href="#' + a + '"]'); if (t) nav.scrollTo({ left: Math.max(0, t.offsetLeft - 24), behavior: 'smooth' }); } }); };
+    this._fit = () => { const h = document.querySelector('header'); if (h) document.documentElement.style.setProperty('--hdr-h', h.getBoundingClientRect().height + 'px'); const nav = document.getElementById('work-tabs'); if (nav) nav.classList.toggle('at-end', nav.scrollLeft + nav.clientWidth >= nav.scrollWidth - 4); };
+    window.addEventListener('resize', this._fit); setTimeout(this._fit, 0); setTimeout(() => { const nav = document.getElementById('work-tabs'); if (nav) nav.addEventListener('scroll', this._fit, { passive: true }); this._fit(); }, 300);
     window.addEventListener('scroll', this._spy, { passive: true }); this._spy();
     this._outside = e => { const d = this.indRef.current; if (d && d.open && !d.contains(e.target)) d.open = false; };
     document.addEventListener('click', this._outside);
