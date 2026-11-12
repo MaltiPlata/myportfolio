@@ -45,6 +45,8 @@
   .site-header-row { padding-left: var(--g) !important; }
   #work-tabs { padding-left: calc(var(--g) - 14px) !important; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } button[id^="p-"]:hover img { transform: none; } }
+  @media (min-width: 900px) { .about-grid { grid-template-columns: minmax(0,1fr) minmax(0,1.5fr) !important; column-gap: clamp(40px,6vw,96px) !important; } }
+  @media (max-width: 640px) { .job-row { flex-direction: column !important; gap: 4px !important; } }
   /* Deck viewer: full-width panel, slide as large as the screen allows */
   .deck-panel { width: min(100%, 1180px) !important; }
   .deck-thumbs { scrollbar-width: thin; }
@@ -499,35 +501,34 @@
     </ul>
   </section>
 
-  <section id="about" style="padding:clamp(44px,6.5vw,88px) clamp(20px,4.5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px">
+  <section id="about" class="about-grid" style="padding:clamp(44px,6.5vw,88px) clamp(20px,4.5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px">
     <div style="display:flex;flex-direction:column;gap:20px">
       <h2 style="margin:0;font-size:clamp(30px,7.5vw,60px);line-height:0.94;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase">About</h2>
       
       <p style="margin:0;font-size:clamp(19px,4.6vw,24px);line-height:1.35;font-weight:600;max-width:34ch;text-wrap:pretty">Art director with a production artist&rsquo;s hands. I can find the idea, cast it, and build the file that ships.</p>
-      <p style="margin:0;font-size:16px;line-height:1.6;color:#3D3C39;max-width:60ch;text-wrap:pretty">Before any of the agencies, I learned brand voice the hard way: years as a brand ambassador for Evolution juice, demoing and selling it to shoppers in Whole Foods and Ralphs. You find out fast what a brand really sounds like when you have to say it to a stranger, one cup at a time. Then I studied advertising at ArtCenter in Pasadena and art direction at BookShop in Santa Monica. I started at M&amp;C Saatchi as a production artist, then designed for UGG, Fox, FXX and Veggie Grill and art directed a digital campaign for Epson. Since then I&rsquo;ve worked on Netflix, Disney and Xbox at Midnight Oil, on Ford in Dearborn, on key art for Paramount+ and Miramax, and on pitch decks for feature films and series.</p>
     </div>
     <div style="display:flex;flex-direction:column;align-content:start">
-      <div style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
+      <div class="job-row" style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
         <span style="font-size:15px;font-weight:700">Senior Brand &amp; Creative Lead</span>
         <span style="font-size:11px;letter-spacing:0.12em;color:#6B6964;text-align:right;white-space:nowrap">FREELANCE · 2015–NOW</span>
       </div>
-      <div style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
+      <div class="job-row" style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
         <span style="font-size:15px;font-weight:700">Creative Director &amp; Brand Strategist</span>
         <span style="font-size:11px;letter-spacing:0.12em;color:#6B6964;text-align:right;white-space:nowrap">ARBOR GROWTH PARTNERS · 2022–23</span>
       </div>
-      <div style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
+      <div class="job-row" style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
         <span style="font-size:15px;font-weight:700">Art Director</span>
         <span style="font-size:11px;letter-spacing:0.12em;color:#6B6964;text-align:right;white-space:nowrap">UWG · 2019–21</span>
       </div>
-      <div style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
+      <div class="job-row" style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
         <span style="font-size:15px;font-weight:700">Designer</span>
         <span style="font-size:11px;letter-spacing:0.12em;color:#6B6964;text-align:right;white-space:nowrap">MIDNIGHT OIL · 2018–20</span>
       </div>
-      <div style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
+      <div class="job-row" style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
         <span style="font-size:15px;font-weight:700">Graphic Designer</span>
         <span style="font-size:11px;letter-spacing:0.12em;color:#6B6964;text-align:right;white-space:nowrap">LA TOURISM · 2017–18</span>
       </div>
-      <div style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
+      <div class="job-row" style="padding:16px 0;border-top:1px solid #DEDCD6;display:flex;justify-content:space-between;gap:16px;align-items:baseline">
         <span style="font-size:15px;font-weight:700">Digital Designer</span>
         <span style="font-size:11px;letter-spacing:0.12em;color:#6B6964;text-align:right;white-space:nowrap">M&amp;C SAATCHI · 2013–17</span>
       </div>
@@ -558,8 +559,9 @@
           </figure>
         </div>
         <div style="display:flex;flex-direction:column;gap:14px;max-width:52ch">
-          <span style="font-size:10px;letter-spacing:0.2em;color:#6B6964">OFF THE CLOCK</span>
-          <p style="margin:0;font-size:16px;line-height:1.6;color:#3D3C39;text-wrap:pretty">I live in Colorado, and when I&rsquo;m not branding ideas, I reset on the rock along the Front Range. Climbing even found its way into my work: I design bilingual campaigns for Escala, a local Latino rock climbing non-profit. I&rsquo;m first-gen Chilean American, and Armenian culture is the one I adopted and made my own.</p>
+          <span style="font-size:10px;letter-spacing:0.2em;color:#6B6964">MY STORY</span>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#3D3C39;text-wrap:pretty">Before any of the agencies, I learned brand voice the hard way: years as a brand ambassador for Evolution juice, demoing and selling it to shoppers in Whole Foods and Ralphs. You find out fast what a brand really sounds like when you have to say it to a stranger, one cup at a time. I took that into ArtCenter and BookShop, then into the agencies: production art at M&amp;C Saatchi, key art for Netflix, Disney and Xbox at Midnight Oil, and art direction on Ford at UWG.</p>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#3D3C39;text-wrap:pretty">Now I live in Colorado, and when I&rsquo;m not branding ideas, I reset on the rock along the Front Range. Climbing even found its way into my work: I design bilingual campaigns for Escala, a local Latino rock climbing non-profit. I&rsquo;m first-gen Chilean American, and Armenian culture is the one I adopted and made my own.</p>
         </div>
       </div>
   </section>
